@@ -1,0 +1,14 @@
+header {
+  color: white;
+}
+
+.navbar-nav .nav-item .n-item {
+  color: white;
+}
+
+.navbar-nav .nav-item .n-item:hover, .navbar-nav .nav-item .active{
+  color: #E31B6D;
+}
+
+
+

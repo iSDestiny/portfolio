@@ -1,0 +1,21 @@
+.bg-1 {
+  background-color: #F5F5F5;
+}
+
+.project-heading::after {
+  content: '';
+  height: 300px;
+  max-height: 500px;
+  width: 80%;
+  max-width: 100%;
+  background-image: urL("../../assets/images/fabflix.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  transition: all 1000ms;
+  margin-top: 10px;
+  border-radius: 1%;
+  margin-left: auto;
+  margin-right: auto;
+}

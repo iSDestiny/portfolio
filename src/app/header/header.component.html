@@ -1,0 +1,28 @@
+
+<header class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <a routerLink="/" class="navbar-brand ml-4">Home</a>
+  <button class="navbar-toggler" type="button" (click)="onToggleNavbar()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse justify-content-end" [ngClass]="{'show': showNavbar}">
+    <ul class="navbar-nav mr-4">
+      <li class="nav-item">
+        <a routerLink="/"
+           routerLinkActive="active"
+           [routerLinkActiveOptions]="{exact:true}"
+           class="nav-link n-item" >
+          About
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          routerLink="/projects"
+          routerLinkActive="active"
+          class="nav-link n-item">
+          Projects
+        </a>
+      </li>
+    </ul>
+  </div>
+</header>
