@@ -8,7 +8,7 @@
   max-height: 500px;
   width: 80%;
   max-width: 100%;
-  background-image: urL("../../assets/images/fabflix.png");
+  background-image: urL("assets/images/fabflix.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
