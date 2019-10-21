@@ -5,8 +5,8 @@ import {
   faFacebook,
   faGit,
   faGithub,
-  faHtml5, faJava,
-  faLinkedinIn,
+  faHtml5, faJava, faJs,
+  faLinkedinIn, faNode,
   faNodeJs,
   faPython, faReact
 } from '@fortawesome/free-brands-svg-icons';
@@ -23,7 +23,8 @@ export class AboutMeComponent implements OnInit {
     github: faGithub,
     facebook: faFacebook,
     python: faPython,
-    javascript: faNodeJs,
+    javascript: faJs,
+    nodejs: faNode,
     database: faDatabase,
     git: faGit,
     html5: faHtml5,

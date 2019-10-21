@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import {
-  faAngular,
+  faAngular, faAws,
   faCss3,
   faFacebook,
   faGit,
   faGithub,
-  faHtml5, faJava,
-  faLinkedinIn,
+  faHtml5, faJava, faJs,
+  faLinkedinIn, faNode,
   faNodeJs,
   faPython, faReact
 } from '@fortawesome/free-brands-svg-icons';
@@ -23,7 +23,8 @@ export class ProjectsComponent implements OnInit {
     github: faGithub,
     facebook: faFacebook,
     python: faPython,
-    javascript: faNodeJs,
+    javascript: faJs,
+    nodejs: faNode,
     database: faDatabase,
     git: faGit,
     html5: faHtml5,
@@ -31,7 +32,8 @@ export class ProjectsComponent implements OnInit {
     angular: faAngular,
     react: faReact,
     java: faJava,
-    code: faCode
+    code: faCode,
+    aws: faAws
   };
 
   hovers = {
