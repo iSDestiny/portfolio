@@ -1,5 +1,39 @@
 .bg-1 {
   background-color: #F5F5F5;
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.btn {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.project-card {
+  width: 470px;
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  border-width: 1px;
+}
+
+.fabflix {
+  background-image: urL("assets/images/fabflix.png");
+}
+
+.card-body {
+  padding-top: 60px;
+  padding-bottom: 70px;
+}
+
+.project-buttons {
+  margin-top: 70px;
+}
+
+.project-skills {
+  font-size: 2rem;
 }
 
 .project-heading::after {
@@ -18,4 +52,27 @@
   border-radius: 1%;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media(max-width: 560px) {
+  .project-card {
+    width: 100%;
+    height: 200px;
+  }
+  .card-body {
+    padding-top: 40px;
+    padding-bottom: 50px;
+  }
+
+  .project-buttons {
+    margin-top: 35px;
+  }
+
+  .project-skills {
+    font-size: 1rem;
+  }
+
+  .project-name {
+    font-size: 1.5rem;
+  }
 }

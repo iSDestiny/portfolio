@@ -1,5 +1,6 @@
 header {
   color: white;
+  z-index: 2;
 }
 
 .navbar-nav .nav-item .n-item {
@@ -8,6 +9,12 @@ header {
 
 .navbar-nav .nav-item .n-item:hover, .navbar-nav .nav-item .active{
   color: #E31B6D;
+}
+
+.navbar {
+  background-color: black;
+  opacity: 0.8;
+  filter: alpha(opacity=80); /* For IE8 and earlier */
 }
 
 

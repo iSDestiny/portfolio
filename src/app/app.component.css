@@ -1,0 +1,20 @@
+hr {
+  width: 60px;
+  border: 2px solid #E31B6D;
+  margin-bottom: 50px;
+}
+
+.section-margin {
+  margin-top: 80px;
+  margin-bottom: 50px;
+}
+
+
+@media(max-width: 560px) {
+  h1 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+}

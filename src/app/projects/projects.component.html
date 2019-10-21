@@ -1,29 +1,62 @@
-<section class="header">
+<!--<section class="header">-->
+<!--  <div class="container">-->
+<!--    <h1 class="text-center my-4">Projects</h1>-->
+<!--    <div class="description text-center mb-4">-->
+<!--      Below are some projects I worked on as part of my studies here at UCI and also some fun side projects.-->
+<!--      Each should have a link to their respective github repos and if they are deployed, then also to the deployed-->
+<!--      website.-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+
+<!--<section class="body text-center my-4">-->
+<!--  <div class="bg-1 p-4">-->
+<!--    <div class="container">-->
+<!--      <h2 class="project-heading my-3 py-3">Fabflix</h2>-->
+<!--      <p class="description">-->
+<!--        Fabflix is an IMDb-like movie full stack web application. Fabflix was my first ever complete-->
+<!--        web application and taught me a lot about the technologies I worked with. For the frontend, Fabflix was-->
+<!--        created using plain HTML, CSS, Javascript and JQuery. For the backend, Tomcat Java was used while mySQL was-->
+<!--        utilized as the database. An AWS Ubuntu virtual server with Apache2 was used to host the web application. I used-->
+<!--        techniques such as a separate Master/Slave mySQL databases on different EC2 instances and also load balancing in order-->
+<!--        to scale the app and to support higher load. The app has its own searching functionality and supported user authentication,-->
+<!--        password encryption, and user transactions. A simple android app made with React Native with a small subset of the-->
+<!--        features of the whole application was also created in order to test the backend with mobile.-->
+<!--      </p>-->
+<!--      <a href="https://github.com/iSDestiny/Fabflix" target="_blank" class="btn btn-outline-dark">Github</a>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+
+<section class="projects bg-1">
   <div class="container">
-    <h1 class="text-center my-4">Projects</h1>
-    <div class="description text-center mb-4">
-      Below are some projects I worked on as part of my studies here at UCI and also some fun side projects.
-      Each should have a link to their respective github repos and if they are deployed, then also to the deployed
-      website.
+    <h1 class="text-center heading-text">PROJECTS</h1>
+    <hr>
+    <div class="row mx-auto">
+      <div class="col-lg-6 mb-2 column">
+        <div class="project-card card mx-md-auto m-0 fabflix"
+             [ngStyle]="{ backgroundImage: hovers.fabflix ? 'none' : 'url(\'assets/images/fabflix.png\')' }"
+             (mouseenter)="hovers.fabflix=true"
+             (mouseleave)="hovers.fabflix=false">
+          <div class="card-body text-center" *ngIf="hovers.fabflix">
+            <h4 class="project-name">Fabflix</h4>
+            <div class="project-skills">
+              <fa-icon [icon]="icons.java" class="mx-1"></fa-icon>
+              <fa-icon [icon]="icons.javascript" class="mx-1"></fa-icon>
+              <fa-icon [icon]="icons.html5" class="mx-1"></fa-icon>
+              <fa-icon [icon]="icons.css3" class="mx-1"></fa-icon>
+            </div>
+            <div class="project-buttons">
+              <a href="#" class="btn btn-outline-dark disabled">View Site</a>
+              <a href="https://github.com/iSDestiny/Fabflix"
+                 target="_blank" class="btn btn-outline-dark">
+                <fa-icon [icon]="icons.github" class="mx-1"></fa-icon>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="body text-center my-4">
-  <div class="bg-1 p-4">
-    <div class="container">
-      <h2 class="project-heading my-3 py-3">Fabflix</h2>
-      <p class="description">
-        Fabflix is an IMDb-like movie full stack web application. Fabflix was my first ever complete
-        web application and taught me a lot about the technologies I worked with. For the frontend, Fabflix was
-        created using plain HTML, CSS, Javascript and JQuery. For the backend, Tomcat Java was used while mySQL was
-        utilized as the database. An AWS Ubuntu virtual server with Apache2 was used to host the web application. I used
-        techniques such as a separate Master/Slave mySQL databases on different EC2 instances and also load balancing in order
-        to scale the app and to support higher load. The app has its own searching functionality and supported user authentication,
-        password encryption, and user transactions. A simple android app made with React Native with a small subset of the
-        features of the whole application was also created in order to test the backend with mobile.
-      </p>
-      <a href="https://github.com/iSDestiny/Fabflix" target="_blank" class="btn btn-outline-dark">Github</a>
-    </div>
-  </div>
-</section>
