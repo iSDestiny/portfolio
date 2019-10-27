@@ -37,7 +37,8 @@ export class ProjectsComponent implements OnInit {
   };
 
   hovers = {
-    fabflix: false
+    fabflix: false,
+    othello: false
   };
   constructor() { }
 

@@ -17,7 +17,7 @@
               <fa-icon [icon]="icons.css3" class="mx-1"></fa-icon>
             </div>
             <div class="project-buttons">
-              <a href="#" class="btn btn-outline-dark disabled">View Site</a>
+              <a href="http://54.153.5.204:8080/project1/" target="_blank" class="btn btn-outline-dark">View Site</a>
               <a href="https://github.com/iSDestiny/Fabflix"
                  target="_blank" class="btn btn-outline-dark">
                 <fa-icon [icon]="icons.github" class="mx-1"></fa-icon>
@@ -26,6 +26,44 @@
           </div>
         </div>
       </div>
+      <div class="col-lg-6 mb-2 column">
+        <div class="project-card card mx-md-auto m-0 fabflix"
+             [ngStyle]="{ backgroundImage: hovers.othello ? 'none' : 'url(\'assets/images/othello_game.png\')' }"
+             (mouseenter)="hovers.othello=true"
+             (mouseleave)="hovers.othello=false">
+          <div class="card-body text-center" *ngIf="hovers.othello">
+            <h4 class="project-name">Othello/Reversi</h4>
+            <div class="project-skills">
+              <fa-icon [icon]="icons.python" class="mx-1"></fa-icon>
+            </div>
+            <div class="project-buttons">
+              <a href="https://github.com/iSDestiny/OthelloBoardGame"
+                 target="_blank" class="btn btn-outline-dark">
+                <fa-icon [icon]="icons.github" class="mx-1"></fa-icon>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+<!--      <div class="col-lg-6 mb-2 column">-->
+<!--        <div class="project-card card mx-md-auto m-0 fabflix"-->
+<!--             [ngStyle]="{ backgroundImage: hovers.othello ? 'none' : 'url(\'assets/images/othello_game.png\')' }"-->
+<!--             (mouseenter)="hovers.othello=true"-->
+<!--             (mouseleave)="hovers.othello=false">-->
+<!--          <div class="card-body text-center" *ngIf="hovers.othello">-->
+<!--            <h4 class="project-name">Othello/Reversi</h4>-->
+<!--            <div class="project-skills">-->
+<!--              <fa-icon [icon]="icons.python" class="mx-1"></fa-icon>-->
+<!--            </div>-->
+<!--            <div class="project-buttons">-->
+<!--              <a href="https://github.com/iSDestiny/OthelloBoardGame"-->
+<!--                 target="_blank" class="btn btn-outline-dark">-->
+<!--                <fa-icon [icon]="icons.github" class="mx-1"></fa-icon>-->
+<!--              </a>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
     </div>
   </div>
 </section>

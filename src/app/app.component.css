@@ -9,6 +9,9 @@ hr {
   margin-bottom: 50px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 @media(max-width: 560px) {
   h1 {

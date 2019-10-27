@@ -1,4 +1,6 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
+import {share} from 'rxjs/operators';
 
 @Component({
   selector: 'app-header',
@@ -8,8 +10,8 @@ import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   showNavbar = false;
-
-  constructor() { }
+  activeFragment = this.route.fragment.pipe(share());
+  constructor(public route: ActivatedRoute) { }
 
   ngOnInit() {
   }

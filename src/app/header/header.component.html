@@ -6,27 +6,29 @@
 
   <div class="collapse navbar-collapse justify-content-end" [ngClass]="{'show': showNavbar}">
     <ul class="navbar-nav mr-4">
-      <li class="nav-item">
-        <a routerLink="/"
-           routerLinkActive="active"
-           [routerLinkActiveOptions]="{exact:true}"
-           class="nav-link n-item" >
+      <li class="nav-item" >
+        <a [routerLink]="'.'"
+           fragment="about"
+           class="nav-link n-item"
+           [class.active]="(activeFragment | async) === 'about'">
           About
         </a>
       </li>
       <li class="nav-item">
         <a
-          routerLink="/projects"
-          routerLinkActive="active"
-          class="nav-link n-item">
+          routerLink="."
+          fragment="projects"
+          class="nav-link n-item"
+          [class.active]="(activeFragment | async) === 'projects'">
           Projects
         </a>
       </li>
       <li class="nav-item">
         <a
-          routerLink="/contacts"
-          routerLinkActive="active"
-          class="nav-link n-item">
+          routerLink="."
+          fragment="contacts"
+          class="nav-link n-item"
+          [class.active]="(activeFragment | async) === 'contacts'">
           Contacts
         </a>
       </li>

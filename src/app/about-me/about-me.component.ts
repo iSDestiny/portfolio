@@ -11,6 +11,8 @@ import {
   faPython, faReact
 } from '@fortawesome/free-brands-svg-icons';
 import {faCode, faDatabase} from '@fortawesome/free-solid-svg-icons';
+import {share} from 'rxjs/operators';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-about-me',
@@ -34,7 +36,8 @@ export class AboutMeComponent implements OnInit {
     java: faJava,
     code: faCode
   };
-  constructor() { }
+  activeFragment = this.route.fragment.pipe(share());
+  constructor(public route: ActivatedRoute) { }
 
   ngOnInit() {
   }
