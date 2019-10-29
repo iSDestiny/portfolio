@@ -38,6 +38,7 @@ const routerOptions: ExtraOptions = {
     RouterModule.forRoot(appRoutes, routerOptions),
     FontAwesomeModule
   ],
+  exports: [RouterModule],
   providers: [],
   bootstrap: [AppComponent]
 })
