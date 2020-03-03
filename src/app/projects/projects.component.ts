@@ -8,9 +8,11 @@ import {
   faHtml5, faJava, faJs,
   faLinkedinIn, faNode,
   faNodeJs,
-  faPython, faReact
+  faPython, faReact,
+  faSass
 } from '@fortawesome/free-brands-svg-icons';
 import {faCode, faDatabase} from '@fortawesome/free-solid-svg-icons';
+import {Project} from './project';
 
 @Component({
   selector: 'app-projects',
@@ -33,16 +35,27 @@ export class ProjectsComponent implements OnInit {
     react: faReact,
     java: faJava,
     code: faCode,
-    aws: faAws
+    aws: faAws,
+    sass: faSass
   };
 
-  hovers = {
-    fabflix: false,
-    othello: false
-  };
+  projects =
+    [new Project('Fabflix', 'url(\'assets/images/fabflix.png\')',
+    [this.icons.java, this.icons.javascript, this.icons.html5, this.icons.css3],
+    {'http://13.52.185.39:8080/project1/': 'View Site',
+      'https://github.com/iSDestiny/Fabflix': this.icons.github}),
+    new Project('Othello/Reversi', 'url(\'assets/images/othello_game.png\')',
+      [this.icons.python],
+      {'https://github.com/iSDestiny/OthelloBoardGame': this.icons.github}),
+    new Project('Sleep Tracker', 'url(\'assets/images/sleep-tracker.png\')',
+      [this.icons.angular, 'url(\'assets/logos/ionic-icon.svg\')', this.icons.sass, this.icons.javascript],
+      {'https://github.com/iSDestiny/sleep-tracker': this.icons.github})];
   constructor() { }
 
   ngOnInit() {
   }
 
+  isString(val: any): boolean {
+    return typeof val === 'string';
+  }
 }

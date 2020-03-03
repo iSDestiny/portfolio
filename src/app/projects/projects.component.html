@@ -3,67 +3,33 @@
     <h1 class="text-center heading-text">PROJECTS</h1>
     <hr>
     <div class="row mx-auto">
-      <div class="col-lg-6 mb-2 column">
+      <div class="col-lg-6 mb-2 column" *ngFor="let project of projects">
         <div class="project-card card mx-md-auto m-0 fabflix"
-             [ngStyle]="{ backgroundImage: hovers.fabflix ? 'none' : 'url(\'assets/images/fabflix.png\')' }"
-             (mouseenter)="hovers.fabflix=true"
-             (mouseleave)="hovers.fabflix=false">
-          <div class="card-body text-center" *ngIf="hovers.fabflix">
-            <h4 class="project-name">Fabflix</h4>
+             [ngStyle]="{ backgroundImage: project.hover ? 'none' : project.background }"
+             (mouseenter)="project.hover=true"
+             (mouseleave)="project.hover=false">
+          <div class="card-body text-center" *ngIf="project.hover">
+            <h4 class="project-name">{{project.name}}</h4>
             <div class="project-skills">
-              <fa-icon [icon]="icons.java" class="mx-1"></fa-icon>
-              <fa-icon [icon]="icons.javascript" class="mx-1"></fa-icon>
-              <fa-icon [icon]="icons.html5" class="mx-1"></fa-icon>
-              <fa-icon [icon]="icons.css3" class="mx-1"></fa-icon>
+              <span *ngFor="let skill of project.skills">
+                <fa-icon [icon]="skill" class="mx-1"></fa-icon>
+              </span>
             </div>
             <div class="project-buttons">
-              <a href="http://54.153.5.204:8080/project1/" target="_blank" class="btn btn-outline-dark">View Site</a>
-              <a href="https://github.com/iSDestiny/Fabflix"
-                 target="_blank" class="btn btn-outline-dark">
-                <fa-icon [icon]="icons.github" class="mx-1"></fa-icon>
-              </a>
+              <span *ngFor="let button of project.buttons | keyvalue">
+                <a [href]="button.key" target="_blank" class="btn btn-outline-dark">
+                  <div *ngIf="isString(button.value); else icon">
+                    {{button.value}}
+                  </div>
+                  <ng-template #icon>
+                    <fa-icon [icon]="button.value"></fa-icon>
+                  </ng-template>
+                </a>
+              </span>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-lg-6 mb-2 column">
-        <div class="project-card card mx-md-auto m-0 fabflix"
-             [ngStyle]="{ backgroundImage: hovers.othello ? 'none' : 'url(\'assets/images/othello_game.png\')' }"
-             (mouseenter)="hovers.othello=true"
-             (mouseleave)="hovers.othello=false">
-          <div class="card-body text-center" *ngIf="hovers.othello">
-            <h4 class="project-name">Othello/Reversi</h4>
-            <div class="project-skills">
-              <fa-icon [icon]="icons.python" class="mx-1"></fa-icon>
-            </div>
-            <div class="project-buttons">
-              <a href="https://github.com/iSDestiny/OthelloBoardGame"
-                 target="_blank" class="btn btn-outline-dark">
-                <fa-icon [icon]="icons.github" class="mx-1"></fa-icon>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-<!--      <div class="col-lg-6 mb-2 column">-->
-<!--        <div class="project-card card mx-md-auto m-0 fabflix"-->
-<!--             [ngStyle]="{ backgroundImage: hovers.othello ? 'none' : 'url(\'assets/images/othello_game.png\')' }"-->
-<!--             (mouseenter)="hovers.othello=true"-->
-<!--             (mouseleave)="hovers.othello=false">-->
-<!--          <div class="card-body text-center" *ngIf="hovers.othello">-->
-<!--            <h4 class="project-name">Othello/Reversi</h4>-->
-<!--            <div class="project-skills">-->
-<!--              <fa-icon [icon]="icons.python" class="mx-1"></fa-icon>-->
-<!--            </div>-->
-<!--            <div class="project-buttons">-->
-<!--              <a href="https://github.com/iSDestiny/OthelloBoardGame"-->
-<!--                 target="_blank" class="btn btn-outline-dark">-->
-<!--                <fa-icon [icon]="icons.github" class="mx-1"></fa-icon>-->
-<!--              </a>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
     </div>
   </div>
 </section>
